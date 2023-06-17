@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
+    use 'christoomey/vim-tmux-navigator'
 
     use {
         'nvim-tree/nvim-tree.lua',

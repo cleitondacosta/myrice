@@ -20,3 +20,13 @@ include "$BASE_DIR/fzf.sh"
 
 unset BASE_DIR
 unset -f include
+
+if
+    command -v tmux &> /dev/null \
+    && [ -n "$PS1" ] \
+    && [[ ! "$TERM" =~ screen ]] \
+    && [[ ! "$TERM" =~ tmux ]] \
+    && [ -z "$TMUX" ]
+then
+  exec tmux
+fi
